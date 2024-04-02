@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <script>
+        function guessGame() {
+            var origNum = "14";
+            var guessNum = prompt("Please guess a Two digit number");
+
+            while (guessNum != origNum) {
+                guessNum = prompt("wrong Guess, Try again");
+            }
+
+            alert("Your guess was " + guessNum + " it is correct")
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click below to play the Guess Game</p>
+    <input type="button" onclick="guessGame()" value="Guess Game">
+</body>
+<script src="first.js"></script>
+
+</html>
