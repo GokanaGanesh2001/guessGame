@@ -9,25 +9,31 @@
         function guessGame() {
             var origNum = prompt("Enter a Number For Guess");
             var guessNum = prompt("Please guess a Two digit number");
-
-            while (guessNum != origNum) {
-                guessNum = prompt("wrong Guess, Try again");
+            var count = 0;
+            var totalChances = 5;
+            while (guessNum != origNum && count < 4) { // Adjusted to 4 because count starts from 0
+                guessNum = prompt("Wrong Guess, " + totalChances-- + " Tries Left"); // Improved message
+                count++;
             }
-
-            alert("Your guess was : " + guessNum + " -> it is correct")
+            if (guessNum == origNum) {
+                alert("Your guess was: " + guessNum + " -> it is correct");
+            } else {
+                alert("5 Tries Completed. The correct number was: " + origNum);
+            }
         }
     </script>
     <style>
-        body{
+        body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size:35px;
+            font-size: 35px;
             font-weight: 700;
         }
+
         button {
-            font-size:35px;
+            font-size: 35px;
             font-weight: 700;
         }
     </style>
