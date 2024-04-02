@@ -7,14 +7,14 @@
     <title>Guess Game</title>
     <script>
         function guessGame() {
-            var origNum = "14";
+            var origNum = prompt("Enter a Number For Guess);
             var guessNum = prompt("Please guess a Two digit number");
 
             while (guessNum != origNum) {
                 guessNum = prompt("wrong Guess, Try again");
             }
 
-            alert("Your guess was " + guessNum + " it is correct")
+            alert("Your guess was : " + guessNum + " -> it is correct")
         }
     </script>
     <style>
@@ -23,7 +23,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size:25px;
+            font-size:35px;
+            font-weight: 700;
+        }
+        button {
+            font-size:35px;
             font-weight: 700;
         }
     </style>
